@@ -8,19 +8,27 @@
     </bean>
 
     <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.pool.ConnectionPool">
-        <constructor-arg name="username" value="postgres"></constructor-arg>
-        <constructor-arg name="poolSize" value="10"></constructor-arg>
-        <constructor-arg name="properties">
-            <map>
-                <entry key="predicate" value="first"></entry>
-            </map>
+        <constructor-arg name="username" type="java.lang.String" value="postgres"></constructor-arg>
+        <constructor-arg name="poolSize" type="java.lang.Integer" value="10"></constructor-arg>
+        <constructor-arg name="properties" type="java.util.Map">
+            <null/>
         </constructor-arg>
-        <constructor-arg name="args">
+        <constructor-arg name="args" type="java.util.List">
             <list>
                 <value>arg1=value1</value>
                 <value>arg2=value2</value>
+                <ref bean="driver"></ref>
             </list>
         </constructor-arg>
+        <property name="properties">
+            <map>
+                <entry key="driver" value-ref="driver"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="companyRepository" class="com.dmdev.spring.repository.CompanyRepository" factory-method="of">
+        <constructor-arg ref="pool1"></constructor-arg>
     </bean>
 
 </beans>

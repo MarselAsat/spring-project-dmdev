@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Xml base config">
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson 5 passed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_3" />
+        <entry key="$PROJECT_DIR$" value="lesson_7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659344008143</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 5 passed">
+      <created>1659352527674</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659352527674</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +123,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Xml base config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Xml base config" />
+    <MESSAGE value="Lesson 5 passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5 passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -126,5 +136,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)context.beanFactory.beanDefinitionMap).entrySet().toArray()[2]).getValue()" custom="java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry" />
+        <watch expression="((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)context.beanFactory.beanDefinitionMap).entrySet().toArray()[2]).getValue()" custom="java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
