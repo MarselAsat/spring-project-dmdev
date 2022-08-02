@@ -7,7 +7,9 @@
         <constructor-arg type="java.lang.String" value="PostgresDriver"/>
     </bean>
 
-    <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.pool.ConnectionPool" scope="prototype">
+    <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.pool.ConnectionPool"
+    init-method="init"
+    destroy-method="destroy">
         <constructor-arg name="username" type="java.lang.String" value="postgres"></constructor-arg>
         <constructor-arg name="poolSize" type="java.lang.Integer" value="10"></constructor-arg>
         <constructor-arg name="properties" type="java.util.Map">
