@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson  10 passed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/LogBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/VerifyBeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson  12 passed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_9" />
+        <entry key="$PROJECT_DIR$" value="lesson_11" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659420594624</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Lesson  12 passed">
+      <created>1659427481901</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659427481901</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +162,8 @@
     <MESSAGE value="Lesson  8 passed" />
     <MESSAGE value="Lesson  9 passed" />
     <MESSAGE value="Lesson  10 passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson  10 passed" />
+    <MESSAGE value="Lesson  12 passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson  12 passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -169,36 +175,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
-          <line>14</line>
+          <line>16</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/LogBeanFactoryPostProcessor.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/VerifyBeanFactoryPostProcessor.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/LogBeanFactoryPostProcessor.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bfpp/VerifyBeanFactoryPostProcessor.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.concurrent.ConcurrentHashMap$MapEntry" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)context.beanFactory.beanDefinitionMap).entrySet().toArray()[2]).getValue()" custom="java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry" />
         <watch expression="((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)context.beanFactory.beanDefinitionMap).entrySet().toArray()[2]).getValue()" custom="java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry" />
         <watch expression="((java.util.concurrent.ConcurrentHashMap)((DefaultListableBeanFactory)beanFactory).beanDefinitionMap).entrySet().toArray()[3]" custom="java.util.concurrent.ConcurrentHashMap,org.springframework.beans.factory.support.DefaultListableBeanFactory" />
+        <watch expression="((ConstructorArgumentValues)((GenericBeanDefinition)((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)((DefaultListableBeanFactory)beanFactory).beanDefinitionMap).entrySet().toArray()[3]).getValue()).constructorArgumentValues).indexedArgumentValues" custom="org.springframework.beans.factory.config.ConstructorArgumentValues,java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry,org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.beans.factory.support.GenericBeanDefinition" />
       </configuration>
     </watches-manager>
   </component>

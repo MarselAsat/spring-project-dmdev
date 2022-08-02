@@ -2,6 +2,8 @@ package com.dmdev.spring.pool;
 
 import org.springframework.beans.factory.InitializingBean;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +24,7 @@ public class ConnectionPool implements InitializingBean {
         this.properties = properties;
     }
 
+    @PostConstruct
     private void init(){
         System.out.println("Initialization connection pool");
     }
@@ -31,6 +34,7 @@ public class ConnectionPool implements InitializingBean {
         System.out.println("Initialization with interface");
     }
 
+    @PreDestroy
     public void destroy(){
         System.out.println("Destroy connection pool");
     }
