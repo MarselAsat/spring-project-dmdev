@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson  12 passed">
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson  14 passed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_11" />
+        <entry key="$PROJECT_DIR$" value="lesson12" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659427481901</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Lesson  13 passed">
+      <created>1659441884268</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659441884268</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,7 +171,9 @@
     <MESSAGE value="Lesson  9 passed" />
     <MESSAGE value="Lesson  10 passed" />
     <MESSAGE value="Lesson  12 passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson  12 passed" />
+    <MESSAGE value="Lesson  13 passed" />
+    <MESSAGE value="Lesson  14 passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson  14 passed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,6 +197,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
           <line>38</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
