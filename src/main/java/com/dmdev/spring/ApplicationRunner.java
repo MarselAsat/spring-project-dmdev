@@ -12,7 +12,7 @@ public class ApplicationRunner {
         System.out.println(BeanFactoryPostProcessor.class.isAssignableFrom(value.getClass()));
 
         try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");) {
-            ConnectionPool connectionPool = context.getBean("p1", ConnectionPool.class);
+            ConnectionPool connectionPool = context.getBean("pool1", ConnectionPool.class);
             CrudRepository companyRepository = context.getBean("companyRepository", CrudRepository.class);
             System.out.println();
             System.out.println(companyRepository.findById(1));

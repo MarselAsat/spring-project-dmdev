@@ -4,14 +4,19 @@ package com.dmdev.spring.bpp;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
 
 import java.util.Arrays;
 
-public class InjectBeansPostProcessor implements BeanPostProcessor, ApplicationContextAware {
+@Component
+public class InjectBeansPostProcessor implements BeanPostProcessor{
 
-    private ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
+
+    public InjectBeansPostProcessor(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -31,8 +36,4 @@ public class InjectBeansPostProcessor implements BeanPostProcessor, ApplicationC
         return bean;
     }
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
 }
