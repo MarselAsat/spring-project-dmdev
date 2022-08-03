@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson  14 passed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/Auditing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/AuditingBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/Transactional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/TransactionalBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dao/CrudRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
@@ -19,6 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -48,7 +57,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dmdev.spring.bpp" />
       <recent name="com.dmdev.spring.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dmdev.spring.bpp" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -148,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659441884268</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Lesson  14 passed">
+      <created>1659448482885</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659448482886</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,28 +200,53 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
-          <line>28</line>
+          <line>31</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java</url>
-          <line>38</line>
+          <line>41</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/InjectBeansPostProcessor.java</url>
           <line>20</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/TransactionalBeanPostProcessor.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/TransactionalBeanPostProcessor.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/TransactionalBeanPostProcessor.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/bpp/TransactionalBeanPostProcessor.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -216,6 +261,9 @@
         <watch expression="((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)context.beanFactory.beanDefinitionMap).entrySet().toArray()[2]).getValue()" custom="java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry" />
         <watch expression="((java.util.concurrent.ConcurrentHashMap)((DefaultListableBeanFactory)beanFactory).beanDefinitionMap).entrySet().toArray()[3]" custom="java.util.concurrent.ConcurrentHashMap,org.springframework.beans.factory.support.DefaultListableBeanFactory" />
         <watch expression="((ConstructorArgumentValues)((GenericBeanDefinition)((java.util.concurrent.ConcurrentHashMap.MapEntry)((java.util.concurrent.ConcurrentHashMap)((DefaultListableBeanFactory)beanFactory).beanDefinitionMap).entrySet().toArray()[3]).getValue()).constructorArgumentValues).indexedArgumentValues" custom="org.springframework.beans.factory.config.ConstructorArgumentValues,java.util.concurrent.ConcurrentHashMap,java.util.concurrent.ConcurrentHashMap.MapEntry,org.springframework.beans.factory.support.DefaultListableBeanFactory,org.springframework.beans.factory.support.GenericBeanDefinition" />
+        <watch expression="companyRepository" />
+        <watch expression="companyRepository" />
+        <watch expression="this.arg$1" custom="java.lang.reflect.Proxy,java.lang.reflect.InvocationHandler" />
       </configuration>
     </watches-manager>
   </component>

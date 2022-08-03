@@ -19,11 +19,14 @@
     <bean class="com.dmdev.spring.bfpp.LogBeanFactoryPostProcessor"/>
     <bean class="com.dmdev.spring.bfpp.VerifyBeanFactoryPostProcessor"/>
     <bean class="com.dmdev.spring.bpp.InjectBeansPostProcessor"/>
+    <bean class="com.dmdev.spring.bpp.TransactionalBeanPostProcessor"/>
+    <bean class="com.dmdev.spring.bpp.AuditingBeanPostProcessor"/>
 
     <bean id="driver" class="java.lang.String">
         <constructor-arg type="java.lang.String" value="${db.driver}"/>
     </bean>
 
+    <bean id="pool2" class="com.dmdev.spring.pool.ConnectionPool"/>
     <bean id="pool1" name="p1,p2,p3" class="com.dmdev.spring.pool.ConnectionPool">
         <constructor-arg name="username" type="java.lang.String" value="${db.username}"></constructor-arg>
         <constructor-arg name="poolSize" type="java.lang.Integer" value="${db.pool.size}"></constructor-arg>

@@ -1,7 +1,7 @@
 package com.dmdev.spring;
 
+import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.pool.ConnectionPool;
-import com.dmdev.spring.repository.CompanyRepository;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,8 +13,9 @@ public class ApplicationRunner {
 
         try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");) {
             ConnectionPool connectionPool = context.getBean("p1", ConnectionPool.class);
-            CompanyRepository companyRepository = context.getBean("companyRepository", CompanyRepository.class);
+            CrudRepository companyRepository = context.getBean("companyRepository", CrudRepository.class);
             System.out.println();
+            System.out.println(companyRepository.findById(1));
         }
 
     }

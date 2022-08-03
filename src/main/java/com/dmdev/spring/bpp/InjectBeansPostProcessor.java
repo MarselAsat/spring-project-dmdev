@@ -1,6 +1,6 @@
 package com.dmdev.spring.bpp;
 
-import com.dmdev.spring.repository.CompanyRepository;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
@@ -23,7 +23,12 @@ public class InjectBeansPostProcessor implements BeanPostProcessor, ApplicationC
                     ReflectionUtils.setField(field, bean, beanForInject);
                 });
 
-        return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+        return bean;
+    }
+
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        return bean;
     }
 
     @Override

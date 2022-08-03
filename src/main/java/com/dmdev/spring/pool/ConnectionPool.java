@@ -8,10 +8,13 @@ import java.util.List;
 import java.util.Map;
 
 public class ConnectionPool implements InitializingBean {
-    private final String username;
-    private final Integer poolSize;
-    private final List<String> args;
+    private String username;
+    private Integer poolSize;
+    private List<String> args;
     private Map<String, Object> properties;
+
+    public ConnectionPool() {
+    }
 
     public ConnectionPool(String username, Integer poolSize, List<String> args, Map<String, Object> properties) {
         this.username = username;
