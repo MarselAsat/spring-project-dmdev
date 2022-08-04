@@ -13,7 +13,10 @@ public class ApplicationRunner {
         System.out.println(CharSequence.class.isAssignableFrom(value.getClass()));
         System.out.println(BeanFactoryPostProcessor.class.isAssignableFrom(value.getClass()));
 
-        try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class)) {
+        try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext()) {
+            context.register(ApplicationConfiguration.class);
+            context.getEnvironment().setActiveProfiles("web", "prod");
+            context.refresh();
             ConnectionPool connectionPool = context.getBean("pool1", ConnectionPool.class);
             CrudRepository companyRepository = context.getBean("companyRepository", CrudRepository.class);
             System.out.println();
