@@ -1,8 +1,10 @@
 package com.dmdev.spring;
 
+import com.dmdev.spring.config.ApplicationConfiguration;
 import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.pool.ConnectionPool;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
@@ -11,7 +13,7 @@ public class ApplicationRunner {
         System.out.println(CharSequence.class.isAssignableFrom(value.getClass()));
         System.out.println(BeanFactoryPostProcessor.class.isAssignableFrom(value.getClass()));
 
-        try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");) {
+        try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class)) {
             ConnectionPool connectionPool = context.getBean("pool1", ConnectionPool.class);
             CrudRepository companyRepository = context.getBean("companyRepository", CrudRepository.class);
             System.out.println();
