@@ -5,12 +5,9 @@ import com.dmdev.spring.bpp.Transactional;
 import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.entity.Company;
 import com.dmdev.spring.pool.ConnectionPool;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
