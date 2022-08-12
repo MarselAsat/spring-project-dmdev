@@ -5,47 +5,46 @@ import com.dmdev.spring.bpp.Transactional;
 import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.entity.Company;
 import com.dmdev.spring.pool.ConnectionPool;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 
+@Slf4j
 @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
 @Transactional
 @Auditing
+@Repository
+@RequiredArgsConstructor
 public class CompanyRepository implements CrudRepository<Integer, Company> {
 
     private final ConnectionPool pool1;
+    @Value("${db.pool.size}")
     private final Integer poolSize;
     private final List<ConnectionPool> pools;
 
-
-    public CompanyRepository(ConnectionPool pool1,
-                             @Value("${db.pool.size}")Integer poolSize,
-                             List<ConnectionPool> pools) {
-        this.pool1 = pool1;
-        this.poolSize = poolSize;
-        this.pools = pools;
-    }
-
     @PostConstruct
     private void init(){
-        System.out.println("init company repository");
+        log.info("init company repository");
     }
 
     @Override
     public Optional<Company> findById(Integer id) {
-        System.out.println("findById method...");
-        return Optional.of(new Company(id));
+        log.info("findById method...");
+        return Optional.of(new Company(id, null, Collections.emptyMap()));
     }
 
     @Override
     public void delete(Integer id) {
-        System.out.println("delete method...");
+        log.info("delete method...");
     }
 
 }

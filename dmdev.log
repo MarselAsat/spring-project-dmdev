@@ -1,0 +1,6 @@
+2022-08-05 15:23:02.853  WARN 22068 --- [main] com.dmdev.spring.pool.ConnectionPool     : Initialization connection pool
+2022-08-05 15:23:02.894  WARN 22068 --- [main] com.dmdev.spring.pool.ConnectionPool     : Initialization connection pool
+2022-08-05 15:23:02.904  WARN 22068 --- [main] com.dmdev.spring.pool.ConnectionPool     : Initialization connection pool
+2022-08-05 15:23:03.024  INFO 22068 --- [SpringApplicationShutdownHook] com.dmdev.spring.pool.ConnectionPool     : Destroy connection pool
+2022-08-05 15:23:03.026  INFO 22068 --- [SpringApplicationShutdownHook] com.dmdev.spring.pool.ConnectionPool     : Destroy connection pool
+2022-08-05 15:23:03.026  INFO 22068 --- [SpringApplicationShutdownHook] com.dmdev.spring.pool.ConnectionPool     : Destroy connection pool

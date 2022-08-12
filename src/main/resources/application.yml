@@ -1,0 +1,40 @@
+db:
+    driver: PostgresDriver
+    hosts: localhost,127.0.0.1
+    password: pass
+    url: postgres:5432
+    username: ${username.value:postgres}
+    pool:
+        size: 12
+        timeout: 10
+    pools:
+        - size: 1
+          timeout: 1
+        - size: 2
+          timeout: 2
+        - size: 3
+          timeout: 3
+    properties:
+      first: 123
+      second: 456
+      third.value: hello
+
+logging:
+  level:
+    root: INFO
+    com.dmdev.spring.pool: INFO
+  file:
+    name: dmdev.log
+    path: /
+
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.67.226:5433/postgres
+    username: postgres
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties.hibernate:
+      show_sql: true
+      format_sql: true
+      hbm2ddl.auto: validate

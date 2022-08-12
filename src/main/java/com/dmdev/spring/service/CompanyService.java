@@ -8,6 +8,7 @@ import com.dmdev.spring.listener.entity.EventEntity;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import com.dmdev.spring.repository.CompanyRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -22,11 +23,12 @@ public class CompanyService {
         this.eventPublisher = applicationEventPublisher;
     }
 
+    @Transactional
     public Optional<CompanyReadDto> findById(Integer id){
         return companyRepository.findById(id)
                 .map(entity -> {
                     eventPublisher.publishEvent(new EventEntity(entity, AccessType.READ));
-                   return new CompanyReadDto(entity.id());
+                   return new CompanyReadDto(entity.getId());
                 });
     }
 }

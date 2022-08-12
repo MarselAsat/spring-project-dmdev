@@ -1,29 +1,30 @@
 package com.dmdev.spring.pool;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Slf4j
 @Component("pool1")
+@RequiredArgsConstructor
 public class ConnectionPool{
-    private final String username;
-    private final Integer poolSize;
 
-    public ConnectionPool(@Value("${db.username}")String username,
-                          @Value("${db.pool.size}")Integer poolSize) {
-        this.username = username;
-        this.poolSize = poolSize;
-    }
+    @Value("${db.username}")
+    private final String username;
+    @Value("${db.pool.size}")
+    private final Integer poolSize;
 
     @PostConstruct
     private void init(){
-        System.out.println("Initialization connection pool");
+        log.warn("Initialization connection pool");
     }
 
     @PreDestroy
     public void destroy(){
-        System.out.println("Destroy connection pool");
+        log.info("Destroy connection pool");
     }
 }
