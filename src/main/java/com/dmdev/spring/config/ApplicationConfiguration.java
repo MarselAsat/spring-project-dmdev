@@ -1,6 +1,5 @@
 package com.dmdev.spring.config;
 
-import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.pool.ConnectionPool;
 import com.dmdev.spring.repository.UserRepository;
 import com.dmdev.web.config.WebConfiguration;
@@ -26,18 +25,5 @@ public class ApplicationConfiguration {
         return new ConnectionPool("test-pool", 25);
     }
 
-    @Bean
-    @Profile("prod&web")
-    public UserRepository userRepository2(ConnectionPool pool2){
-        return new UserRepository(pool2);
-    }
-
-    @Bean
-    public UserRepository userRepository3(){
-        ConnectionPool connectionPool1 = pool3();
-        ConnectionPool connectionPool2 = pool3();
-        ConnectionPool connectionPool3 = pool3();
-        return new UserRepository(pool3());
-    }
 
 }

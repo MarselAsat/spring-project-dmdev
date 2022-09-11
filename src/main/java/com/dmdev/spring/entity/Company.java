@@ -9,6 +9,9 @@ import javax.persistence.*;
 import java.util.HashMap;
 import java.util.Map;
 
+
+@NamedQuery(name = "Company.findByName",
+        query = "select c from Company c where c.name = :name")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -29,7 +29,7 @@ public class CompanyServiceIT {
     void findById(){
 
         Optional<CompanyReadDto> actualResult = companyService.findById(COMPANY_ID);
-        CompanyReadDto expectedResult = new CompanyReadDto(COMPANY_ID);
+        CompanyReadDto expectedResult = new CompanyReadDto(COMPANY_ID, null);
         System.out.println(databaseProperties.password());
 
         assertTrue(actualResult.isPresent());

@@ -4,46 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Lesson 31 passed">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dmdev.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/DatabaseProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/BasicType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/UserChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-qa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-testtt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/TestApplicationRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/annotation/IT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/CompanyServiceIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/UserServiceIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/repository/CompanyRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/CompanyServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/spring.properties" afterDir="false" />
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Chapter Data JPA Transaction done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/AuditConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/PersonalInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/PersonalInfo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserCreateEditDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserReadDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/AuditingEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Revision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/CompanyReadMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserReadMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/FilterUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/FilterUserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/QPredicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/audit.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/bye.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/IntegrationTestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/ApplicationRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/ApplicationConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/JpaConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/JpaConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dao/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dao/CrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dao/CrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/CompanyReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/CompanyReadDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/TestApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/TestApplicationRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/CompanyServiceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/CompanyServiceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/UserServiceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/UserServiceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/repository/CompanyRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/repository/CompanyRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/CompanyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/CompanyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +72,16 @@
         <option value="Record" />
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="Class" />
+        <option value="HTML File" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_30" />
+        <entry key="$PROJECT_DIR$" value="lesson_49" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,24 +113,27 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marsel.asatov/javaProjects/spring-project-dmdev/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marsel.asatov/javaProjects/spring-project-dmdev/src/main/resources/templates/greeting&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dmdev.spring.dto.UserCreateEditDto" />
+      <recent name="com.dmdev.spring.dto" />
+      <recent name="com.dmdev.spring.repository" />
       <recent name="com.dmdev.spring.entity" />
       <recent name="com.dmdev.spring.config.conditional" />
-      <recent name="com.dmdev.spring.dto" />
-      <recent name="com.dmdev.spring.listener.entity" />
-      <recent name="com.dmdev.spring.bpp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources\templates\greeting" />
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\webapp\WEB-INF\jsp\greeting" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\test\resources" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev" />
@@ -122,11 +142,16 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources\templates" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources\sql" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dmdev.spring.dto" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.dmdev.spring.repository" />
       <recent name="com.dmdev.spring.service" />
+      <recent name="com.dmdev.spring.integration" />
+      <recent name="com.dmdev.spring.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.dmdev.spring.bpp" />
@@ -137,8 +162,8 @@
       <command value="mvn wrapper:wrapper" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CompanyRepositoryTest.findById">
-    <configuration name="ApplicationRunner" type="Application" factoryName="Application" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ApplicationRunner">
+    <configuration name="ApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.ApplicationRunner" />
       <module name="spring-project-dmdev" />
       <extension name="coverage">
@@ -151,97 +176,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompanyRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-project-dmdev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.spring.repository.*" />
+          <option name="PATTERN" value="com.dmdev.spring.integration.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.spring.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.repository.CompanyRepositoryTest" />
+      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.integration.controller.UserControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompanyRepositoryTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-project-dmdev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.spring.repository.*" />
+          <option name="PATTERN" value="com.dmdev.spring.integration.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.spring.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.repository.CompanyRepositoryTest" />
-      <option name="METHOD_NAME" value="findById" />
+      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.integration.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompanyServiceIT.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-project-dmdev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.spring.integration.service.*" />
+          <option name="PATTERN" value="com.dmdev.spring.integration.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.integration.service.CompanyServiceIT" />
-      <option name="METHOD_NAME" value="findById" />
+      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.integration.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-project-dmdev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dmdev.spring.integration.service.*" />
+          <option name="PATTERN" value="com.dmdev.spring.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration.service" />
-      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.integration.service.UserServiceIT" />
+      <option name="PACKAGE_NAME" value="com.dmdev.spring.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dmdev.spring.service.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.dmdev.spring.integration in spring-project-dmdev" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-project-dmdev" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dmdev.spring.integration.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dmdev.spring.integration" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.ApplicationRunner" />
-      <item itemvalue="JUnit.CompanyServiceIT.findById" />
-      <item itemvalue="JUnit.CompanyRepositoryTest" />
-      <item itemvalue="JUnit.CompanyRepositoryTest.findById" />
-      <item itemvalue="JUnit.UserServiceIT" />
-      <item itemvalue="JUnit.com.dmdev.spring.integration in spring-project-dmdev" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest.create" />
+      <item itemvalue="JUnit.UserControllerTest.findAll" />
+      <item itemvalue="JUnit.UserServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CompanyRepositoryTest.findById" />
-        <item itemvalue="JUnit.CompanyServiceIT.findById" />
-        <item itemvalue="JUnit.CompanyRepositoryTest" />
-        <item itemvalue="JUnit.UserServiceIT" />
-        <item itemvalue="JUnit.com.dmdev.spring.integration in spring-project-dmdev" />
+        <item itemvalue="Application.ApplicationRunner" />
+        <item itemvalue="JUnit.UserControllerTest.create" />
+        <item itemvalue="JUnit.UserControllerTest.findAll" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -380,8 +390,20 @@
       <option name="project" value="LOCAL" />
       <updated>1659623642426</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Chapter Data JPA Transaction done">
+      <created>1660294255068</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1660294255068</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.yml" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -412,16 +434,12 @@
     <MESSAGE value="Lesson 29 passed" />
     <MESSAGE value="Lesson 30 passed" />
     <MESSAGE value="Lesson 31 passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 31 passed" />
+    <MESSAGE value="Chapter Data JPA Transaction done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter Data JPA Transaction done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/CompanyServiceIT.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/CompanyServiceIT.java</url>
           <line>37</line>
@@ -429,7 +447,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/service/UserServiceIT.java</url>
-          <line>20</line>
+          <line>19</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -439,8 +457,101 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/repository/CompanyRepositoryTest.java</url>
-          <line>32</line>
+          <line>50</line>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>77</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/GreetingController.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/GreetingController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/LoginController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/GreetingController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.hibernate.tool.schema.spi.SchemaManagementException" package="org.hibernate.tool.schema.spi" />

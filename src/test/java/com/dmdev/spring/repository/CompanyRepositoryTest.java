@@ -12,6 +12,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 import javax.persistence.EntityManager;
 
 import java.util.Map;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,8 +21,25 @@ import static org.junit.jupiter.api.Assertions.*;
 @RequiredArgsConstructor
 class CompanyRepositoryTest {
 
+    private static final Integer APPLE_ID = 5;
     private final EntityManager entityManager;
     private final TransactionTemplate transactionTemplate;
+    private final CompanyRepository companyRepository;
+
+    @Test
+    void checkFindByQuery(){
+        companyRepository.findByName("google");
+//        companyRepository.findByNameContainingIgnoreCase("a");
+    }
+
+    @Test
+    void delete(){
+        Optional<Company> company = companyRepository.findById(APPLE_ID);
+        assertTrue(company.isPresent());
+        company.ifPresent(companyRepository::delete);
+        entityManager.flush();
+        assertTrue(companyRepository.findById(APPLE_ID).isEmpty());
+    }
 
     @Test
     void findById() {

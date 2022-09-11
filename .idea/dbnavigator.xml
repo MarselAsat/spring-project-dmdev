@@ -39,9 +39,21 @@ from
 select
     *
 from
-    company;
+    users;
 
-delete from company where id = 5;]]></console>
+delete from company where id = 5;
+select * from users_aud;
+select * from revision;
+
+select firstname, lastname, birth_date from users where company_id = 1;
+
+update databasechangelog set md5sum = '8:4be0aeb5e449a3461e1e549e177c8ecb' where orderexecuted = 9;
+
+select * 
+from
+    databasechangelog d;
+
+drop table company;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -49,6 +61,9 @@ delete from company where id = 5;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="68776b51-ebfe-40e6-b7ce-4b2174e4faa9" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="68776b51-ebfe-40e6-b7ce-4b2174e4faa9" dataset="public.databasechangelog" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -58,6 +73,7 @@ delete from company where id = 5;]]></console>
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/data.sql" connection-id="68776b51-ebfe-40e6-b7ce-4b2174e4faa9" session-id="MAIN" current-schema="public" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/audit.sql" connection-id="68776b51-ebfe-40e6-b7ce-4b2174e4faa9" session-id="MAIN" current-schema="public" />
     <mapping file-url="file://$PROJECT_DIR$/src/main/resources/sql/init.sql" connection-id="68776b51-ebfe-40e6-b7ce-4b2174e4faa9" session-id="MAIN" current-schema="public" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">

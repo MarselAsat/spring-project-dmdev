@@ -23,18 +23,29 @@ logging:
   level:
     root: INFO
     com.dmdev.spring.pool: INFO
+    org.springframework.jdbc.core: TRACE
   file:
     name: dmdev.log
     path: /
 
 spring:
+  mvc:
+    format:
+      date: iso
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
   datasource:
-    url: jdbc:postgresql://192.168.67.226:5433/postgres
+    url: jdbc:postgresql://192.168.3.11:5433/postgres
+#    url: jdbc:postgresql://192.168.67.226:5433/postgchrres
     username: postgres
     password: pass
     driver-class-name: org.postgresql.Driver
   jpa:
     properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
       show_sql: true
       format_sql: true
       hbm2ddl.auto: validate
+      open-in-view: false

@@ -1,9 +1,9 @@
 package com.dmdev.spring.service;
 
-import com.dmdev.spring.dao.CrudRepository;
 import com.dmdev.spring.dto.CompanyReadDto;
 import com.dmdev.spring.entity.Company;
 import com.dmdev.spring.listener.entity.EventEntity;
+import com.dmdev.spring.repository.CompanyRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,7 +24,7 @@ class CompanyServiceTest {
     private static final Integer COMPANY_ID = 1;
 
     @Mock
-    private CrudRepository<Integer,Company> companyRepository;
+    private CompanyRepository companyRepository;
     @Mock
     private ApplicationEventPublisher eventPublisher;
     @InjectMocks
@@ -39,7 +39,7 @@ class CompanyServiceTest {
 
         assertTrue(actualResult.isPresent());
 
-        CompanyReadDto expectedResult = new CompanyReadDto(COMPANY_ID);
+        CompanyReadDto expectedResult = new CompanyReadDto(COMPANY_ID, null);
 
         actualResult.ifPresent(actual -> assertEquals(expectedResult, actual));
 
