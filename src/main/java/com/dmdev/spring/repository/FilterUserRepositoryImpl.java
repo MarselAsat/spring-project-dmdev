@@ -60,7 +60,7 @@ public class FilterUserRepositoryImpl implements FilterUserRepository {
         com.querydsl.core.types.Predicate predicate = QPredicate.builder()
                 .add(userFilter.getFirstname(), QUser.user.firstname::containsIgnoreCase)
                 .add(userFilter.getLastname(), QUser.user.lastname::containsIgnoreCase)
-                .add(userFilter.getBirthDate(), QUser.user.birthDate::before)
+                .add(userFilter.getBirthDate(), QUser.user.birthDate::loe)
                 .build();
 
         return new JPAQuery<User>(entityManager)

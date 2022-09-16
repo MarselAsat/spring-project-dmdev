@@ -3,7 +3,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Registration</title>
 </head>
     <body>
         <form th:action="@{/users}" method="post" th:object="${user}">
@@ -35,5 +35,8 @@
             </div>
             <button type="submit">Create</button>
         </form>
+    <div th:if="${errors}">
+        <p style="color : red" th:each="error : ${errors}" th:text="${error.defaultMessage}">Error message</p>
+    </div>
     </body>
 </html>
