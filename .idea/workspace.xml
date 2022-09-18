@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Add validation create and update form">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/handler/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java" afterDir="false" />
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Added REST controller and controllerAdvice.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-3.0.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lombok.config" beforeDir="false" afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/WebConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserCreateEditDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserCreateEditDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-testtt.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_50" />
+        <entry key="$PROJECT_DIR$" value="lesson_95" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,7 +86,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/marsel.asatov/javaProjects/spring-project-dmdev/src/main/resources/templates/greeting",
+    "last_opened_file_path": "C:/Users/marsel.asatov/javaProjects/spring-project-dmdev/src/main/resources/db/changelog",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
@@ -80,11 +99,11 @@
       <recent name="com.dmdev.spring.repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources\db\changelog" />
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev" />
+      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources\templates\greeting" />
       <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\webapp\WEB-INF\jsp\greeting" />
-      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\main\resources" />
-      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev\src\test\resources" />
-      <recent name="C:\Users\marsel.asatov\javaProjects\spring-project-dmdev" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -359,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663348569127</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added REST controller and controllerAdvice.">
+      <created>1663358611103</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663358611103</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -399,7 +425,8 @@
     <MESSAGE value="Chapter Data JPA Transaction done" />
     <MESSAGE value="Create registration form" />
     <MESSAGE value="Add validation create and update form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add validation create and update form" />
+    <MESSAGE value="Added REST controller and controllerAdvice." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added REST controller and controllerAdvice." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -534,11 +561,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
           <line>90</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
@@ -552,6 +574,56 @@
           <line>16</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.hibernate.tool.schema.spi.SchemaManagementException" package="org.hibernate.tool.schema.spi" />
           <option name="timeStamp" value="39" />
@@ -564,6 +636,24 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>53</line>
+          <properties class="com.dmdev.spring.http.rest.UserRestController" method="update">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java</url>
+          <line>48</line>
+          <properties class="com.dmdev.spring.http.rest.UserRestController" method="createUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

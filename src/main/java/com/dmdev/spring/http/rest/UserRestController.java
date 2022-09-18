@@ -30,7 +30,6 @@ import javax.validation.groups.Default;
 public class UserRestController {
 
     private final UserService userService;
-    private final CompanyService companyService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public PageResponse<UserReadDto> findAll(UserFilter userFilter, Pageable pageable){
@@ -45,16 +44,16 @@ public class UserRestController {
 
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public UserReadDto createUser(@Validated({Default.class, CreateActive.class}) @RequestBody UserCreateEditDto user){
         return userService.create(user);
     }
 
-    @PutMapping("/{id}")
-    public UserReadDto updateUser(@PathVariable("id") Long userId,
-                             @Validated({Default.class, EditAction.class}) @RequestBody UserCreateEditDto user){
-        return userService.update(userId, user)
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public UserReadDto update(@PathVariable("id") Long id,
+                              @Validated({Default.class, EditAction.class}) @RequestBody UserCreateEditDto user) {
+        return userService.update(id, user)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 

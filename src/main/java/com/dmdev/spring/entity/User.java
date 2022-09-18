@@ -47,4 +47,6 @@ public class User extends AuditingEntity<Long>{
     @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
+
+    private String image;
 }

@@ -1,44 +1,43 @@
 db:
-    driver: PostgresDriver
-    hosts: localhost,127.0.0.1
-    password: pass
-    url: postgres:5432
-    username: ${username.value:postgres}
-    pool:
-        size: 12
-        timeout: 10
-    pools:
-        - size: 1
-          timeout: 1
-        - size: 2
-          timeout: 2
-        - size: 3
-          timeout: 3
-    properties:
-      first: 123
-      second: 456
-      third.value: hello
+  username: ${username.value:postgres}
+  password: 123456
+  driver: PostgresDriver
+  url: postgres:5432
+  hosts: localhost,127.0.0.1
+  properties:
+    first: 123
+    second: 567
+    third.value: Third
+  pool:
+    size: 12
+    timeout: 10
+  pools:
+    - size: 1
+      timeout: 1
+    - size: 2
+      timeout: 2
+    - size: 3
+      timeout: 3
+
+spring.profiles.active: qa
 
 logging:
   level:
     root: INFO
-    com.dmdev.spring.pool: INFO
+    com.dmdev.spring.database.pool: INFO
     org.springframework.jdbc.core: TRACE
   file:
     name: dmdev.log
     path: /
-
 spring:
   mvc:
-    format:
-      date: iso
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+    format:
+      date: iso
   datasource:
     url: jdbc:postgresql://192.168.1.179:5433/postgres
-#    url: jdbc:postgresql://192.168.3.11:5433/postgres
-#    url: jdbc:postgresql://192.168.67.226:5433/postgchrres
     username: postgres
     password: pass
     driver-class-name: org.postgresql.Driver
@@ -49,4 +48,4 @@ spring:
       show_sql: true
       format_sql: true
       hbm2ddl.auto: validate
-      open-in-view: false
+    open-in-view: false

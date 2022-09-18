@@ -14,12 +14,14 @@ import com.dmdev.spring.repository.QPredicate;
 import com.dmdev.spring.repository.UserRepository;
 import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,6 +38,7 @@ public class UserService {
     private final CompanyRepository companyRepository;
     private final UserCreateEditMapper userCreateEditMapper;
     private final UserReadMapper userReadMapper;
+    private final ImageService imageService;
 
     public Page<UserReadDto> findAll(UserFilter userFilter, Pageable pageable) {
         Predicate predicate = QPredicate.builder()
@@ -61,7 +64,10 @@ public class UserService {
     @Transactional
     public UserReadDto create(UserCreateEditDto user) {
         return Optional.ofNullable(user)
-                .map(userCreateEditMapper::mapTo)
+                .map(dto -> {
+                    uploadImage(dto.getImage());
+                    return userCreateEditMapper.mapTo(dto);
+                })
                 .map(userRepository::save)
                 .map(userReadMapper::mapTo)
                 .orElseThrow();
@@ -71,9 +77,19 @@ public class UserService {
     public Optional<UserReadDto> update(Long userId, UserCreateEditDto userDto) {
         Optional<User> optionalUser = userRepository.findById(userId);
         return optionalUser.
-                map(user -> userCreateEditMapper.mapTo(userDto, user))
+                map(user -> {
+                    uploadImage(userDto.getImage());
+                    return userCreateEditMapper.mapTo(userDto, user);
+                })
                 .map(userRepository::saveAndFlush)
                 .map(userReadMapper::mapTo);
+    }
+
+    @SneakyThrows
+    private void uploadImage(MultipartFile image) {
+        if(!image.isEmpty()) {
+            imageService.upload(image.getOriginalFilename(), image.getInputStream());
+        }
     }
 
     @Transactional
