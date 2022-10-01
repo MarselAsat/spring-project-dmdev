@@ -4,33 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Added image upload for user registration and update form.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-4.0.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Configure spring secure.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserCreateEditDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserCreateEditDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserReadDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/dto/UserReadDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/AuditConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/AuditConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/handler/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/handler/ControllerExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/rest/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserCreateEditMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserReadMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/mapper/UserReadMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/ImageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_95" />
+        <entry key="$PROJECT_DIR$" value="lesson_97" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -396,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663534272413</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Configure spring secure.">
+      <created>1664649451053</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664649451053</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -438,7 +425,8 @@
     <MESSAGE value="Add validation create and update form" />
     <MESSAGE value="Added REST controller and controllerAdvice." />
     <MESSAGE value="Added image upload for user registration and update form." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added image upload for user registration and update form." />
+    <MESSAGE value="Configure spring secure." />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure spring secure." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -543,37 +531,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>67</line>
+          <line>72</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>85</line>
+          <line>90</line>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>81</line>
+          <line>86</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>96</line>
+          <line>101</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>79</line>
+          <line>84</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -618,12 +596,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>90</line>
+          <line>95</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>91</line>
+          <line>96</line>
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -632,14 +610,9 @@
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.14/spring-web-5.3.14.jar!/org/springframework/web/filter/DelegatingFilterProxy.class</url>
-          <line>102</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/service/UserService.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="106" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.hibernate.tool.schema.spi.SchemaManagementException" package="org.hibernate.tool.schema.spi" />
@@ -647,7 +620,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
-          <line>97</line>
+          <line>102</line>
           <properties class="com.dmdev.spring.http.controller.UserController" method="deleteUser">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -677,6 +650,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.concurrent.ConcurrentHashMap$MapEntry" memberName="value" />
+        <PinnedItemInfo parentTag="org.springframework.security.core.context.SecurityContextImpl" memberName="authentication" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>

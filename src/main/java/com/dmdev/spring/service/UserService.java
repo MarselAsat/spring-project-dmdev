@@ -59,7 +59,7 @@ public class UserService implements UserDetailsService {
                 .toList();
     }
 
-    @PreAuthorize("hasAuthority('ADMIN', 'USER')")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public Optional<UserReadDto> findById(Long id){
         return userRepository.findById(id)
                 .map(userReadMapper::mapTo);

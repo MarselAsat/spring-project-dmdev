@@ -16,6 +16,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.annotation.CurrentSecurityContext;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -51,8 +55,9 @@ public class UserController {
 //    @PreAuthorize("hasAuthority('ADMIN')")
 //    @PostAuthorize("returnObject")
     public String findById(Model model,
-                           @PathVariable("id") Long id){
-
+                           @PathVariable("id") Long id,
+                           @CurrentSecurityContext SecurityContext securityContext,
+                           @AuthenticationPrincipal UserDetails userDetails){
       return userService.findById(id).map(user -> {
                model.addAttribute("user", user);
                model.addAttribute("roles", Role.values());
