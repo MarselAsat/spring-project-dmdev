@@ -119,7 +119,7 @@ class UserRepositoryTest {
     @Test
     void testQueries(){
         List<User> users = userRepository.findBy("a", "ov");
-        List<User> byUsername = userRepository.findByUsername("ivan@gmail.com");
+//        List<User> byUsername = userRepository.findByUsername("ivan@gmail.com");
         System.out.println(users);
     }
 

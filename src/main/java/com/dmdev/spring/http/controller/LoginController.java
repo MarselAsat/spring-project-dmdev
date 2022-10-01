@@ -15,11 +15,4 @@ public class LoginController {
         return "greeting/login";
     }
 
-    @PostMapping("/login")
-    public String login(Model model,
-                        @ModelAttribute("login")LoginDto loginDto){
-        System.out.println();
-
-        return "redirect:https://google.com";
-    }
 }

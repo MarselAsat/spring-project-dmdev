@@ -51,12 +51,12 @@ update databasechangelog set md5sum = '8:4be0aeb5e449a3461e1e549e177c8ecb' where
 
 select * 
 from
-    databasechangelog d;
+    users;
 
 drop table company;
 
 update users
-set company_id = 3 where id = 2;]]></console>
+set company_id = 3 where id = 8;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

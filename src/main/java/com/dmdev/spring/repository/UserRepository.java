@@ -35,9 +35,9 @@ public interface UserRepository extends
     @Query("select u from User u where u.firstname like %:firstname% and u.lastname like %:lastname%")
     List<User> findBy(@Param("firstname") String firstname, @Param("lastname")  String lastname);
 
-    @Query(nativeQuery = true,
-    value = "select u.* from users u where username like :username")
-    List<User> findByUsername(@Param("username") String username);
+//    @Query(nativeQuery = true,
+//    value = "select u.* from users u where username like :username")
+//    List<User> findByUsername(@Param("username") String username);
 
     @Modifying(clearAutomatically = true, flushAutomatically = true)
     @Query("update User u " +
@@ -64,6 +64,8 @@ public interface UserRepository extends
             "where company_id = :companyId",
             nativeQuery = true)
     List<PersonalInfo2> findAllByCompanyId(@Param("companyId") Integer companyId);
+
+    Optional<User> findByUsername(String username);
 
 
 }

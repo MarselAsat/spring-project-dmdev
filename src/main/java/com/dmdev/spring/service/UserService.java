@@ -4,7 +4,6 @@ package com.dmdev.spring.service;
 import com.dmdev.spring.dto.UserCreateEditDto;
 import com.dmdev.spring.dto.UserFilter;
 import com.dmdev.spring.dto.UserReadDto;
-import com.dmdev.spring.entity.Company;
 import com.dmdev.spring.entity.QUser;
 import com.dmdev.spring.entity.User;
 import com.dmdev.spring.mapper.UserCreateEditMapper;
@@ -17,22 +16,24 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.*;
 
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-public class UserService {
+public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final CompanyRepository companyRepository;
@@ -40,6 +41,8 @@ public class UserService {
     private final UserReadMapper userReadMapper;
     private final ImageService imageService;
 
+//    @PostFilter("filterObject.role.name().equals('ADMIN')")
+//    @PostFilter("@companyService.findById(filterObject.company.id()).isPresent()")
     public Page<UserReadDto> findAll(UserFilter userFilter, Pageable pageable) {
         Predicate predicate = QPredicate.builder()
                 .add(userFilter.getFirstname(), QUser.user.firstname::containsIgnoreCase)
@@ -56,6 +59,7 @@ public class UserService {
                 .toList();
     }
 
+    @PreAuthorize("hasAuthority('ADMIN', 'USER')")
     public Optional<UserReadDto> findById(Long id){
         return userRepository.findById(id)
                 .map(userReadMapper::mapTo);
@@ -65,8 +69,8 @@ public class UserService {
     public UserReadDto create(UserCreateEditDto user) {
         return Optional.ofNullable(user)
                 .map(dto -> {
-                    uploadImage(dto.getImage());
-                    return userCreateEditMapper.mapTo(dto);
+                    uploadImage(user.getImage());
+                    return userCreateEditMapper.mapTo(user);
                 })
                 .map(userRepository::save)
                 .map(userReadMapper::mapTo)
@@ -87,7 +91,7 @@ public class UserService {
 
     @SneakyThrows
     private void uploadImage(MultipartFile image) {
-        if(!image.isEmpty()) {
+        if (!image.isEmpty()) {
             imageService.upload(image.getOriginalFilename(), image.getInputStream());
         }
     }
@@ -100,5 +104,24 @@ public class UserService {
                     userRepository.flush();
                     return true;
                 }).orElse(false);
+    }
+
+    public Optional<byte[]> findAvatar(Long id){
+        return userRepository.findById(id)
+                .map(User::getImage)
+                .filter(StringUtils::hasText)
+                .flatMap(imageService::get);
+    }
+
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByUsername(username)
+                .map(user -> new org.springframework.security.core.userdetails.User(
+                        user.getUsername(),
+                        user.getPassword(),
+                        Collections.singleton(user.getRole())
+                ))
+                .orElseThrow(() -> new UsernameNotFoundException("Failed ti retrieve user: " + username));
     }
 }

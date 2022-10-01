@@ -27,4 +27,6 @@ public class UserReadDto {
     Role role;
 
     CompanyReadDto company;
+
+    String image;
 }

@@ -5,7 +5,9 @@ import com.dmdev.spring.entity.Company;
 import com.dmdev.spring.entity.User;
 import com.dmdev.spring.repository.CompanyRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Optional;
@@ -13,8 +15,10 @@ import java.util.function.Predicate;
 
 @Component
 @RequiredArgsConstructor
-public class UserCreateEditMapper implements Mapper<User, UserCreateEditDto>{
+public class UserCreateEditMapper implements Mapper<User, UserCreateEditDto> {
     private final CompanyRepository companyRepository;
+    private final PasswordEncoder passwordEncoder;
+
     @Override
     public User mapTo(UserCreateEditDto object) {
         User user = new User();
@@ -36,12 +40,17 @@ public class UserCreateEditMapper implements Mapper<User, UserCreateEditDto>{
         user.setRole(object.getRole());
         user.setCompany(getCompany(object.getCompanyId()));
 
+        Optional.ofNullable(object.getRawPassword())
+                .filter(StringUtils::hasText)
+                .map(passwordEncoder::encode)
+                .ifPresent(user::setPassword);
+
         Optional.ofNullable(object.getImage())
                 .filter(Predicate.not(MultipartFile::isEmpty))
                 .ifPresent(image -> user.setImage(image.getOriginalFilename()));
     }
 
-    private Company getCompany(Integer id){
+    private Company getCompany(Integer id) {
         return Optional.ofNullable(id)
                 .flatMap(companyRepository::findById)
                 .orElse(null);

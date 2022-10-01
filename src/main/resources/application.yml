@@ -21,6 +21,9 @@ db:
 
 spring.profiles.active: qa
 
+server:
+  port: 8081
+
 logging:
   level:
     root: INFO

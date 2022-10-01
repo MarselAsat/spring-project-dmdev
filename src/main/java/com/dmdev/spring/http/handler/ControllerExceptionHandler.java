@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice(basePackages = "com.dmdev.spring.http.controller")
 public class ControllerExceptionHandler /*extends ResponseEntityExceptionHandler*/ {
 
-    @ExceptionHandler(Exception.class)
-    public String handleExeption(Exception e, HttpServletRequest request){
-        log.error("Failed to return responce", e);
-        return "error/error";
-    }
+//    @ExceptionHandler(Exception.class)
+//    public String handleExeption(Exception e, HttpServletRequest request){
+//        log.error("Failed to return responce", e);
+//        return "error/error";
+//    }
 }
