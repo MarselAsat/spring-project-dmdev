@@ -56,7 +56,11 @@ from
 drop table company;
 
 update users
-set company_id = 3 where id = 8;]]></console>
+set company_id = 3 where id = 8;
+
+insert into users 
+(username, birth_date, firstname, lastname, role, company_id) 
+values ('spingtestservice@gmail.com', '2022-09-09 0:00:00', 'test', 'test', 'USER', 1 );]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -227,6 +231,7 @@ set company_id = 3 where id = 8;]]></console>
         <object-type name="FUNCTION" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRIBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
         <object-type name="VIEW" editor-type="SELECTION" />

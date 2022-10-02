@@ -5,7 +5,12 @@ import com.dmdev.spring.dto.UserReadDto;
 import com.dmdev.spring.entity.Role;
 import com.dmdev.spring.integration.IntegrationTestBase;
 import lombok.RequiredArgsConstructor;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -38,11 +43,13 @@ class UserServiceTest extends IntegrationTestBase {
     void create() {
         UserCreateEditDto user = new UserCreateEditDto(
                 "test",
+                "test",
                 LocalDate.now(),
                 "Test",
                 "Test",
                 Role.USER,
-                1
+                1,
+                new MockMultipartFile("file", new byte[0])
         );
         UserReadDto userReadDto = userService.create(user);
         assertEquals(user.getUsername(), userReadDto.getUsername());
@@ -57,11 +64,13 @@ class UserServiceTest extends IntegrationTestBase {
     void update() {
         UserCreateEditDto user = new UserCreateEditDto(
                 "test",
+                "test",
                 LocalDate.now(),
                 "Test",
                 "Test",
                 Role.ADMIN,
-                COMPANY_1
+                COMPANY_1,
+                new MockMultipartFile("file", new byte[0])
         );
         Optional<UserReadDto> update = userService.update(1L, user);
         UserReadDto userReadDto = update.orElse(null);

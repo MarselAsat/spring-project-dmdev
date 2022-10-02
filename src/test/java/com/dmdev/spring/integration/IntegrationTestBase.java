@@ -2,12 +2,14 @@ package com.dmdev.spring.integration;
 
 import com.dmdev.spring.integration.annotation.IT;
 import org.junit.jupiter.api.BeforeAll;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 @IT
+@WithMockUser(username = "test@gmail.com", password = "test", authorities = {"ADMIN", "USER"})
 public abstract class IntegrationTestBase {
 //    public static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:14.1");
 //
