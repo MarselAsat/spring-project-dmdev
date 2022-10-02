@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Added csrf.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/PasswordEncoderConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dmdev/spring/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/IntegrationTestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/IntegrationTestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/integration/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/dmdev/spring/service/UserServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="09be444a-1c9b-4a10-b526-b1ce9d440c7e" name="Changes" comment="Added oauth2 authorization." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson_108" />
+        <entry key="$PROJECT_DIR$" value="lessom_109" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -404,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664656496134</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added oauth2 authorization.">
+      <created>1664746262543</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664746262543</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -424,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
     <MESSAGE value="Xml base config" />
     <MESSAGE value="Lesson 5 passed" />
     <MESSAGE value="Lesson 8 passed" />
@@ -449,7 +444,8 @@
     <MESSAGE value="Configure spring secure." />
     <MESSAGE value="Added authentication principal." />
     <MESSAGE value="Added csrf." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added csrf." />
+    <MESSAGE value="Added oauth2 authorization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added oauth2 authorization." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,6 +633,11 @@
           <line>47</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.hibernate.tool.schema.spi.SchemaManagementException" package="org.hibernate.tool.schema.spi" />
           <option name="timeStamp" value="39" />
@@ -676,6 +677,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dmdev/spring/http/controller/UserController.java</url>
+          <line>80</line>
+          <properties class="com.dmdev.spring.http.controller.UserController" method="createUser">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
