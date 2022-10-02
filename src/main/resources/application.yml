@@ -57,7 +57,7 @@ spring:
       client:
         registration:
           google:
-            clientId: ---.apps.googleusercontent.com
+            clientId: ---.apps.googleusercontent
             clientSecret: ---_hxhjh
             redirectUri: http://localhost:8081/login/oauth2/code/google
             scope: openid,email,profile
