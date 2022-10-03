@@ -56,7 +56,7 @@ from
 drop table company;
 
 update users
-set company_id = 3 where id = 8;
+set username = 'springtestpr@gmail.com' where id = 9;
 
 insert into users 
 (username, birth_date, firstname, lastname, role, company_id) 

@@ -25,6 +25,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Set;
 
+import static com.dmdev.spring.entity.Role.ADMIN;
+
 @Configuration
 @EnableMethodSecurity
 @RequiredArgsConstructor
@@ -37,8 +39,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //                .csrf().disable()
                 .authorizeHttpRequests(urlConfig -> urlConfig
                         .antMatchers("/login", "/users/registration", "/v3/api-docs/**", "/swagger-ui/**").permitAll()
-                        .antMatchers("/users/{\\d+}/delete").hasAuthority(Role.ADMIN.getAuthority())
-                        .antMatchers("/admin/**").hasAuthority(Role.ADMIN.getAuthority())
+                        .antMatchers("/users/{\\d+}/delete").hasAuthority(ADMIN.getAuthority())
+                        .antMatchers("/admin/**").hasAuthority(ADMIN.getAuthority())
                         .anyRequest().authenticated())
                 .logout(logout -> logout
                         .logoutUrl("/logout")
