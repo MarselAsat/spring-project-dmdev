@@ -57,8 +57,8 @@ spring:
       client:
         registration:
           google:
-            clientId: 1004974818021-k47lka8mg2ruje4tin0md82ss0oto7e4.apps.googleusercontent.com
-            clientSecret: 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
+            clientId: 1004974818021-k47lka8mg2ruje4tin0md82ss0
+            clientSecret: GOCSPX-s4Ht29ukI4xbehN
             redirectUri: http://localhost:8081/login/oauth2/code/google
             scope: openid,email,profile
 
@@ -68,7 +68,7 @@ spring:
 springdoc:
   swagger-ui:
     oauth:
-      client-id: 1004974818021-k47lka8mg2ruje4tin0md82ss0oto7e4.apps.googleusercontent.com
-      client-secret: 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
+      client-id: 1004974818021-k47lka8mg2ruje4tin0md82ss0
+      client-secret: GOCSPX-s4Ht29ukI4xbehN
       scope: openid,email,profile
     oauth2-redirect-url: http://localhost:8081/swagger-ui/oauth2-redirect.html
